@@ -14,19 +14,11 @@ function App() {
     axios
       .get('https://raw.githubusercontent.com/AdnaanH/country-data/7ee064093bbd1acb8db54bb8b6e2023c00390630/formattedData.json')
       .then((response) => {
-        let filteredCountries = response.data.countries;
-
-        if (searchText) {
-          filteredCountries = filteredCountries.filter((country) =>
-            country.name.toLowerCase().includes(searchText.toLowerCase())
-          );
-        }
-
-        if (selectedRegion) {
-          filteredCountries = filteredCountries.filter(
-            (country) => country.region === selectedRegion
-          );
-        }
+        const filteredCountries = response.data.countries.filter((country) => {
+          const matchesSearchText = country.name.toLowerCase().includes(searchText.toLowerCase());
+          const matchesRegion = selectedRegion === '' || country.region === selectedRegion;
+          return matchesSearchText && matchesRegion;
+        });
 
         setCountryData(filteredCountries);
       })
@@ -39,7 +31,18 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage countries={countryData} searchText={searchText} setSearchText={setSearchText} selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} />} />
+          <Route
+            index
+            element={
+              <HomePage
+                countries={countryData}
+                searchText={searchText}
+                setSearchText={setSearchText}
+                selectedRegion={selectedRegion}
+                setSelectedRegion={setSelectedRegion}
+              />
+            }
+          />
           <Route path="/detail/:countryCode" element={<DetailPage />} />
         </Route>
       </Routes>

@@ -1,5 +1,12 @@
-function TopBar() {
-  
+function TopBar({ onSearch, onFilter }) {
+  const handleSearch = (event) => {
+    onSearch(event.target.value);
+  };
+
+  const handleFilter = (event) => {
+    onFilter(event.target.value);
+  };
+
   return (
     <div className="container-fluid sticky-top topBarSticky">
       <div className="row topBar justify-content-between">
@@ -14,11 +21,12 @@ function TopBar() {
               placeholder="Search for a country"
               aria-label="Search"
               aria-describedby="search-button"
+              onChange={handleSearch}
             />
           </div>
         </div>
         <div className="col-2 text-end">
-          <select className="form-select">
+          <select className="form-select" onChange={handleFilter}>
             <option value="filter">Filter by Region</option>
             <option value="africa">Africa</option>
             <option value="america">America</option>

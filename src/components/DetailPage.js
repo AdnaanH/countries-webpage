@@ -83,8 +83,8 @@ function DetailPage() {
                   <p className="card-text fw-bold">
                     Languages:
                     {countryDetails.languages.map((language) => (
-                      <span className="fw-normal" key={language.iso639_1}>
-                        {language.name}
+                      <span className="fw-normal d-flex justify-content-start" key={language.iso639_1}>
+                        {language.name} 
                       </span>
                     ))}
                   </p>

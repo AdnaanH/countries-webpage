@@ -1,3 +1,5 @@
+import React from 'react';
+
 function TopBar({ onSearch, onFilter }) {
   const handleSearch = (event) => {
     onSearch(event.target.value);
@@ -27,9 +29,9 @@ function TopBar({ onSearch, onFilter }) {
         </div>
         <div className="col-2 text-end">
           <select className="form-select" onChange={handleFilter}>
-            <option value="filter">Filter by Region</option>
+            <option value="">Filter by Region</option>
             <option value="africa">Africa</option>
-            <option value="america">America</option>
+            <option value="americas">America</option>
             <option value="asia">Asia</option>
             <option value="europe">Europe</option>
             <option value="oceania">Oceania</option>

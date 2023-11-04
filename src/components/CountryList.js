@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CountryCard from './CountryCard';
 
-function CountryList({ searchValue }) {
+function CountryList({ searchValue, filterValue }) {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -19,15 +19,24 @@ function CountryList({ searchValue }) {
       });
   }, []);
 
-  // Filter countries based on the searchValue
-  const filteredCountries = countries.filter((country) =>
+  // Filter by region when a region is selected
+  const filteredCountries = countries.filter((country) => {
+    if (filterValue) {
+      return country.region.toLowerCase() === filterValue.toLowerCase();
+    } else {
+      return true; // Show all countries if no region is selected
+    }
+  });
+
+  // Further filter by search value
+  const filteredCountriesByName = filteredCountries.filter((country) =>
     country.name.toLowerCase().includes(searchValue.toLowerCase())
   );
 
   return (
     <div className="container-fluid">
       <div className="row flex-wrap countryList">
-        {filteredCountries.map((country) => (
+        {filteredCountriesByName.map((country) => (
           <CountryCard key={country.alpha3Code} country={country} />
         ))}
       </div>

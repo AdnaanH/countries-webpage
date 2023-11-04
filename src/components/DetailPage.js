@@ -25,7 +25,7 @@ function DetailPage() {
   }, [countryCode]);
 
   if (!countryDetails) {
-    return <div>Loading...</div>;
+    return <div>...</div>;
   }
 
   return (

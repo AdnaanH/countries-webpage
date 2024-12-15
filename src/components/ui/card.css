@@ -1,0 +1,38 @@
+.card {
+    width: 100%;
+    height: 375px;
+    background: var(--background-element);
+    border-radius: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.card .card-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.card .card-details h2 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.card .card-details ul {
+    list-style: none;
+}
+
+.card .card-details ul li span {
+    font-size: 15px;
+    font-weight: 200;
+}

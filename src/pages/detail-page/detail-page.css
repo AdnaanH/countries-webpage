@@ -1,0 +1,23 @@
+.country-page {
+    position: relative;
+    top: 70px;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.btn {
+    display: flex;
+    justify-content: start;
+}
+
+.btn button {
+    padding: 10px 18px;
+    background: var(--background-element);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px var(--background-element);
+    cursor: pointer;
+}

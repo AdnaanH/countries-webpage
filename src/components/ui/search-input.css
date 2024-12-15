@@ -1,0 +1,25 @@
+.search-input {
+    background: var(--background-element);
+    width: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 17px;
+}
+
+.search-input input {
+    flex: 1;
+    border: none;
+    background: transparent;
+}
+
+.search-input input:active, .search-input input:focus {
+    outline: none;
+}
+
+@media (max-width: 376px) {    
+    .search-input {
+        width: 100%;
+    }
+}

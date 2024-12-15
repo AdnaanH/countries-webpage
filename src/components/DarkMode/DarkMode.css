@@ -1,0 +1,17 @@
+.theme {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+}
+
+@media (max-width: 376px) {    
+    .theme {
+        font-size: 16px;
+    }
+}

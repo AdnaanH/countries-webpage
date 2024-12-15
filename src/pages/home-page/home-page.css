@@ -1,0 +1,15 @@
+main {
+    position: relative;
+    top: 70px;
+    padding: 20px 50px;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--background);
+}
+
+@media (max-width: 376px) {  
+    main {
+        padding: 0 15px;
+        top: 75px;
+    }
+}

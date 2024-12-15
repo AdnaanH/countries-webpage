@@ -1,0 +1,26 @@
+.continent-selector {
+    background: var(--background-element);
+    width: 300px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 17px;
+    cursor: pointer;
+}
+
+.continent-selector select {
+    flex: 1;
+    border: none;
+    background: transparent;
+}
+
+.continent-selector select:active, .continent-selector select:focus {
+    outline: none;
+}
+
+@media (max-width: 376px) {    
+    .continent-selector {
+        width: 100%;
+    }
+}

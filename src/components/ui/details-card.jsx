@@ -34,6 +34,28 @@ const DetailsCard = ({ country }) => {
                 <span>No border countries</span>
               )}
             </div>
+            {/* <button className="popup-button">Show more details</button>
+            <div className="popup">
+              <div className="popup-content">
+                <div className="popup-header">
+                  <h2>{country.name}</h2>
+                  <button className="popup-close">&times;</button>
+                </div>
+                <div className="popup-body">
+                  <h3>Region: {country.region}</h3>
+                  <h3>Sub Region: {country.subregion}</h3>
+                  <h3>Capital: {country.capital || "N/A"}</h3>
+                  <h3>Population: {country.population}</h3>
+                  <h3>Native Name: {country.nativeName}</h3>
+                  <h3>Top Level Domain: {country.topLevelDomain.join(", ")}</h3>
+                  <h3>Currencies: {country.currencies.map(currency => currency.name).join(", ")}</h3>
+                  <h3>Languages: {country.languages.map((language) => language.name).join(", ")}</h3>
+                </div>
+                <div className="popup-footer">
+                  <button className="popup-close">Close</button>
+                </div>
+              </div>
+            </div> */}
         </div>
     </section>
   )

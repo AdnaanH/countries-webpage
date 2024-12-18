@@ -21,3 +21,16 @@
     box-shadow: 3px var(--background-element);
     cursor: pointer;
 }
+
+@media (max-width: 376px) {    
+    .country-page {
+        position: relative;
+        top: 70px;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+}

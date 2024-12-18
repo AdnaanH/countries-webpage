@@ -64,10 +64,27 @@ p {
 
 .border-countries span {
     font-weight: 300;
+    border-radius: 7px;
+    background: var(--background-element);
+    padding: 2px 5px;
 }
 
 @media (max-width: 376px) {    
     .details-card {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .details-image {
+        padding-right: 10px;
+    }
+
+    .details-info {
+        padding: 3px;
+    }
+
+    .details-section {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
 }

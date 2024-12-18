@@ -69,6 +69,12 @@ p {
     padding: 2px 5px;
 }
 
+.popup-button {
+    padding: 10px 20px;
+    border: none;
+    background: var(--background-element);
+}
+
 @media (max-width: 376px) {    
     .details-card {
         grid-template-columns: repeat(1, 1fr);

@@ -12,6 +12,7 @@ This project is a responsive Countries Webpage built with React 19 (installed vi
 4. [Usage](#usage)  
 5. [Technologies Used](#technologies-used)  
 6. [Project Structure](#project-structure)  
+7. [Utility Functions](#utility-functions)  
 
 ---
 
@@ -23,6 +24,7 @@ This project is a responsive Countries Webpage built with React 19 (installed vi
 - Individual country detail pages with detailed information.
 - Popup showing random facts about the selected country.
 - Fully responsive design for all devices.
+- Dynamic country descriptions generated using the `generateRandomCountryDescription` utility.
 
 ---
 
@@ -94,6 +96,27 @@ countries-webpage/
 │   └── utils/                 # Utility functions
 ├── package.json               # Project dependencies and scripts
 └── vite.config.js             # Vite configuration
+```
+
+---
+
+### Utility Functions
+
+#### `generateRandomCountryDescription(country)`
+
+A sophisticated utility function that generates dynamic, informative descriptions for countries based on their specific characteristics. This function:
+
+- Accepts a country object as input
+- Generates descriptions across multiple categories (geography, culture, economy, tourism)
+- Uses real country data to create accurate and relevant content
+- Implements intelligent randomization to avoid repetition
+- Formats numbers for better readability
+- Calculates additional metrics like population density
+- Handles edge cases gracefully
+
+Example usage:
+```javascript
+const description = generateRandomCountryDescription(country);
 ```
 
 ---

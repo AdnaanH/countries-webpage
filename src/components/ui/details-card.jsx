@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PropTypes from "prop-types"
 import "./details-card.css"
 import DetailsPopup from './details-popup';
+import { FaArrowRight } from 'react-icons/fa';
 
 const DetailsCard = ({ country }) => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -42,7 +43,7 @@ const DetailsCard = ({ country }) => {
               )}
             </div>
             <div className="btn">
-                <button className="popup-button" onClick={handleOpenPopup}>Learn More</button>
+                <button className="popup-button" onClick={handleOpenPopup}>Learn More <FaArrowRight /></button>
                 {isPopupOpen && <DetailsPopup country={country} onClose={handleClosePopup} />}
             </div>
         </div>

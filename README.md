@@ -22,7 +22,7 @@ This project is a responsive Countries Webpage built with React 19 (installed vi
 - Filter functionality to view countries by region.
 - Search functionality to find countries by name.
 - Individual country detail pages with detailed information.
-- Popup showing random facts about the selected country.
+- Popup showing random information about the selected country.
 - Fully responsive design for all devices.
 - Dynamic country descriptions generated using the `generateRandomCountryDescription` utility.
 
@@ -68,7 +68,7 @@ pnpm run dev
 2. Use the region filter to view countries from specific regions.
 3. Search for a country by entering its name in the search bar.
 4. Click on a country to view its details page with more information.
-5. View random information about the country through a popup on the details page.
+5. View random information about the country through a popup by clicking learn more on the details page.
 
 ---
 
@@ -100,6 +100,7 @@ countries-webpage/
 
 ---
 
+<<<<<<< HEAD
 ### Utility Functions
 
 #### `generateRandomCountryDescription(country)`
@@ -122,3 +123,6 @@ const description = generateRandomCountryDescription(country);
 ---
 
 Feel free to explore, contribute, and provide feedback!
+=======
+Feel free to explore, contribute, and provide feedback!
+>>>>>>> 218fcef796c47f43940f70257ec7eb857747ab42

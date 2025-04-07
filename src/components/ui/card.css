@@ -26,7 +26,12 @@
 .card .card-details h2 {
     font-size: 24px;
     font-weight: 800;
+<<<<<<< HEAD
     line-clamp: 1;
+=======
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+>>>>>>> 218fcef796c47f43940f70257ec7eb857747ab42
 }
 
 .card .card-details ul {
